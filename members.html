@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ふぉーかす！ - バーチャルの世界へようこそ">
+    <meta name="keywords" content="VTuber, バーチャル, ふぉーかす">
+    <title>ふぉーかす！</title>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'aep6aeb',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ドット背景 (Canvas) -->
+    <canvas id="dotCanvas"></canvas>
+
+    <!-- ローディング画面 -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- ナビゲーション -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="../素材/ロゴ/logo_ふぉーかす2_透過.png" alt="ふぉーかす！">
+                <span class="nav-logo-text">ふぉーかす！</span>
+            </a>
+            <a href="https://www.youtube.com/@Focuson_theFuture" target="_blank" class="nav-cta">チャンネルへ！</a>
+            <button class="nav-toggle" aria-label="メニューを開く">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">ホーム</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">最新情報</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">ふぉーかす！とは</a></li>
+                <li class="nav-item"><a href="members.html" class="nav-link active">メンバー</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">ギャラリー</a></li>
+                <li class="nav-item"><a href="links.html" class="nav-link">リンク</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+            <div class="glass-shapes">
+                <div class="glass-shape"></div>
+                <div class="glass-shape"></div>
+                <div class="glass-shape"></div>
+                <div class="glass-shape"></div>
+                <div class="glass-shape"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-content" style="text-align: center;">
+                <h1 class="hero-title hero-color-4">
+                    <span class="title-line">OUR</span>
+                    <span class="title-line">MEMBERS</span>
+                </h1>
+                <p class="hero-subtitle">所属メンバー</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Membersセクション -->
+    <section id="members" class="members">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">所属メンバー</h2>
+            </div>
+            <div class="members-grid" id="shared-members-container">
+                <!-- JSで挿入 -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contactセクション -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-content">
+                <p class="contact-description">
+                    お仕事のご依頼やお問い合わせは以下からお願いいたします。
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">ふぉーかす！</span>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#home">ホーム</a>
+                    <a href="#news">最新情報</a>
+                    <a href="#about">とは</a>
+                    <a href="#members">メンバー</a>
+                    <a href="#contact">お問い合わせ</a>
+                    <a href="#links">リンク</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 ふぉーかす！ All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- トップへ戻るボタン -->
+    <button id="backToTop" class="back-to-top" aria-label="トップへ戻る">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <script src="js/site-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
