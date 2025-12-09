@@ -41,28 +41,28 @@ const SITE_DATA = {
         {
             name: "うのはな",
             role: "Creator",
-            image: "../素材/テスト用ちびキャラ/unohana.png",
+            image: "assets/images/members/unohana.png",
             color: "var(--color-member-2)", // Yellow
             detail: "準備中<br>うのはなの詳細プロフィールが入ります。"
         },
         {
             name: "窓ロ",
             role: "Creator",
-            image: "../素材/テスト用ちびキャラ/madoro.png",
+            image: "assets/images/members/madoro.png",
             color: "var(--color-member-3)", // Orange
             detail: "準備中<br>窓ロの詳細プロフィールが入ります。"
         },
         {
             name: "かんざき×",
             role: "Creator",
-            image: "../素材/テスト用ちびキャラ/kanzaki.png",
+            image: "assets/images/members/kanzaki.png",
             color: "var(--color-member-4)", // Blue
             detail: "準備中<br>かんざき×の詳細プロフィールが入ります。"
         },
         {
             name: "くろろ",
             role: "Creator",
-            image: "../素材/テスト用ちびキャラ/kuroro.png",
+            image: "assets/images/members/kuroro.png",
             color: "var(--color-member-1)", // Red
             detail: "準備中<br>くろろの詳細プロフィールが入ります。"
         }
